@@ -7,7 +7,7 @@ git push -u origin master
 
 #making changes
 git add .
-git commit -m "deleted images"
+git commit -am "deleted images"
 git push
 
 # CRM-filesharing-and-attendance-app

@@ -25,7 +25,7 @@ SECRET_KEY = '-a&)ovs1pz0*7ed1=(lwyi^7z+ws5qn7g#lcu#w1a4r1n5g64_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost:8000']
+ALLOWED_HOSTS = ['localhost:8000','crmstudentmanagement.herokuapp.com']
 
 
 # Application definition

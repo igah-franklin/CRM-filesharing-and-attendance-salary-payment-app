@@ -30,7 +30,7 @@ class StudentSignUpForm(UserCreationForm):
         user = super().save(commit=False)
         user.is_student = True
         user.save()
-        student = Student.objects.create(user=user, profile_pic='Profile_pics/1.png')
+        student = Student.objects.create(user=user, profile_pic='Profile_pics/2.jpg')
         
         #student.interests.add(*self.cleaned_data.get('interests'))
         return user
@@ -96,7 +96,7 @@ class TeacherSignUpForm(UserCreationForm):
         user.save()
         #if commit:
           #  user.save()
-        teacher = Teacher.objects.create(user=user,course=Course.objects.get(id=1), profile_pic='Profile_pics/1.png')
+        teacher = Teacher.objects.create(user=user,course=Course.objects.get(id=1), profile_pic='Profile_pics/2.jpg')
         return user
 
 #teacher account update

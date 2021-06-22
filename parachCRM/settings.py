@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+import django_heroku
+import dj_datbase_url
+from decouple import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-a&)ovs1pz0*7ed1=(lwyi^7z+ws5qn7g#lcu#w1a4r1n5g64_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['localhost:8000','crmstudentmanagement.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -129,6 +131,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 STATIC_URL = '/static/'
 
+STATICFILES_STORGE = 'whitenoise.storage.CompressedManifestStaticfilesStorage'
 
 
 MEDIA_URL = '/media/'
@@ -137,3 +140,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #For Custom USER
 AUTH_USER_MODEL = "parachapp.User"
+
+django_heroku.settings(locals())

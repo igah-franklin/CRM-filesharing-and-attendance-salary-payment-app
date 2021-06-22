@@ -96,7 +96,7 @@ class TeacherSignUpForm(UserCreationForm):
         user.save()
         #if commit:
           #  user.save()
-        teacher = Teacher.objects.create(user=user,course=Course.objects.get(id=1), profile_pic='Profile_pics/2.jpg')
+        teacher = Teacher.objects.create(user=user,course=Course.objects.get(id=1), profile_pic='Profile_pics/3.jpg')
         return user
 
 #teacher account update

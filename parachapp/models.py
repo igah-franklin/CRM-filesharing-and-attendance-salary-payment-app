@@ -130,7 +130,7 @@ class UploadFile(models.Model):
     teacherinstance = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     file_title = models.CharField(max_length=120)
-    files = models.FileField(upload_to='media', null=True, blank=True)
+    files = models.FileField(upload_to='media', null=True)
     uploaded_at = models.DateField(auto_now_add=True)
 
     def __str__(self):

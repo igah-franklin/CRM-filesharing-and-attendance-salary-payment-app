@@ -27,7 +27,7 @@
             <li><a class="dropdown-trigger2"></a></li>
            
             <li class="divider"></li>
-            <li><a href="{% url 'parachapp:logout' %}"><i class="material-icons sidenav-icons">lock</i>logout</a></li>
+            <li><a href="{% url 'parachapp:logout' %}"><i class="fas fa-sign-out-alt"></i>logout</a></li>
           </ul>
           <nav>
             <div class="nav-wrapper"><a href="#" data-target="sidenav-1" class="left sidenav-trigger hide-on-medium-and-up"><i class="material-icons">menu</i></a>
@@ -41,7 +41,7 @@
                 <li>---</li>
                 <!-- Dropdown Trigger -->
                 <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">
-                  <i class="material-icons right">arrow_drop_down</i></a></li>
+                  <i class="fas fa-arrow-down"></i></a></li>
               </ul>
             </div>
           </nav>
@@ -51,7 +51,7 @@
         <!-- LEFT SIDEBAR  -->
         <ul id="sidenav-1" class="sidenav sidenav-fixed sidenav-icons2">
             <div class="profile_picture">
-              <img src="{% static 'img/logo2.png' %}" alt="" class="">
+                <img src="{% static 'img/logo2.png' %}" alt="" class="">
             </div>
           
           <li class="left-align"><a href="{% url 'parachapp:dashboard' %}" ><i class="fas fa-th-large"></i>Admin Dashboard</a></li>

@@ -149,4 +149,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #For Custom USER
 AUTH_USER_MODEL = "parachapp.User"
 
-django_heroku.settings(locals())
+django_heroku.settings(locals(), static=False,logging=False)

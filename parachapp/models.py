@@ -85,7 +85,7 @@ class StudentAdvancedProfile(models.Model):
         ('Not Fully Paid', 'Not Fully Paid'),
         ('Not Paid','Not Paid'),
     )
-    payment_status = models.CharField(max_length=12, choices=STATUS, default="Not Paid")
+    payment_status = models.CharField(max_length=16, choices=STATUS, default="Not Paid")
     completed_course = models.BooleanField(default=False, null=True, blank=True)
     date_paid = models.DateTimeField(auto_now_add=True)
 

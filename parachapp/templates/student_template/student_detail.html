@@ -23,7 +23,7 @@
     font-size: 20px;
     color: #000;
     text-transform: lowercase;
-    transform: translateY(70px);
+    
   }
   .design{
     background-color: #009688!important;
@@ -38,7 +38,7 @@
     background-color:#009688;
     color: #fff;
   }
-
+  
 </style>
 <main class="">
      <section class="profile-page">
@@ -90,7 +90,7 @@
                 
                 <div class="card-action profile-info-card">
                   <div class="row">
-                    <div class="col m5">
+                    <div class="col m5 s12">
                       <div class="card-action card-border">
                         <div class="row">
                           <div class="col m2">
@@ -103,7 +103,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col m5">
+                    <div class="col m5 s12">
                       <div class="card-action card-border">
                         <div class="row">
                           <div class="col m2">
@@ -133,7 +133,7 @@
                     {%endif%}
                   </div>
                   <div class="row">
-                    <div class="col m5">
+                    <div class="col m6 s12">
                       <div class="card-action card-border">
                         <div class="row">
                           <div class="col m2">
@@ -146,7 +146,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col m5 ">
+                    <div class="col m6 s12 ">
                       <div class="card-action card-border">
                         <div class="row ">
                           <div class="col m2">
@@ -156,16 +156,14 @@
                               <i class="far fa-times"></i>
                             {%endif%}
                           </div>
-                          <div class="col m10">
+                          <div class="col m10 s12">
                             <span>Payment status</span>
                             <h6>{{profile.payment_status}} </h6>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col m2">
-                      
-                    </div>
+                    
                   </div>
                 </div>
                 
@@ -173,7 +171,7 @@
             </div>
           </div>
         {%endfor%}
-          <div class="col m8 s12">
+          <div class="col m8">
               <div class="card horizontal">
                 <div class="card-stacked">
                   <div class="card-action profile-info-card design">
@@ -186,7 +184,7 @@
                               
                               <th>Title of file</th>
                               <th>Tutor</th>
-                              <th>Phone</th>
+                             
                               <th>Date added</th>
                               <th>Download</th>
                           </tr>
@@ -198,7 +196,7 @@
                           <tr>
                               <td>{{files.file_title}}</td>
                               <td>{{files.teacherinstance.firstname}}</td>
-                              <td>0{{files.teacherinstance.mobile_phone}}</td>
+                              
                               <td>{{files.uploaded_at}}</td>
                               <td><a class="" href="{{files.files.url}}" download="{{files.files.url}}"><i class="far fa-file-download"></i> download</a></td>
                           </tr>

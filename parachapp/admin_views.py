@@ -29,8 +29,8 @@ def adminhome(request):
     teacher_count = Teacher.objects.all().count()
 
     advanced_profile_instance = StudentAdvancedProfile.objects.all()
-    pending_payments = StudentAdvancedProfile.objects.filter(payment_status='NFP').count()
-    completed_payments = StudentAdvancedProfile.objects.filter(payment_status='FP').count()
+    pending_payments = StudentAdvancedProfile.objects.filter(payment_status='Not Fully Paid').count()
+    completed_payments = StudentAdvancedProfile.objects.filter(payment_status='Fully Paid').count()
     
 
     context ={

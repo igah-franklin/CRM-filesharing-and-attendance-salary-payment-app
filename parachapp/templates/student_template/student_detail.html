@@ -73,6 +73,10 @@
                     <div class="collapsible-body"><span>{{student.lastname}} {{student.firstname}}</span></div>
                   </li>
                   <li>
+                    <div class="collapsible-header"><i class="far fa-user"></i>Gender</div>
+                    <div class="collapsible-body"><span>{{student.gender}}</span></div>
+                  </li>
+                  <li>
                     <div class="collapsible-header"><i class="far fa-phone"></i>Phone</div>
                     <div class="collapsible-body"><span>{{student.mobile_phone}}</span></div>
                   </li>
@@ -218,7 +222,7 @@
           </div>
           <div class="row ">
             {%if request.user.is_superuser%}
-            <div class="col m5 s12 offset-m4">
+            <div class="col m5 s12">
               <div class="card horizontal">
                 <div class="card-stacked">
                   <div class="card-action profile-info-card">
@@ -238,7 +242,7 @@
             </div>
           
             {%else%}
-            <div class="col m5 s12 offset-m4">
+            <div class="col m5 s12">
               <div class="card horizontal">
                 <div class="card-stacked">
                   <div class="card-action profile-info-card">

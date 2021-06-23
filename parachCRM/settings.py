@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-a&)ovs1pz0*7ed1=(lwyi^7z+ws5qn7g#lcu#w1a4r1n5g64_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['parach.herokuapp.com', '127.0.0.1']
 
@@ -133,7 +133,7 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = [
-            os.path.join(BASE_DIR, 'static')
+            os.path.join(BASE_DIR, 'staticfiles')
         
         ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
@@ -149,4 +149,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #For Custom USER
 AUTH_USER_MODEL = "parachapp.User"
 
-django_heroku.settings(locals())
+django_heroku.settings(locals(), staticfiles=False,logging=False)
